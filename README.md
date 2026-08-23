@@ -12,7 +12,11 @@ A state-of-the-art **One-Shot Real-Time Face Verification and Recognition System
 > **Title:** *Real - Time Face Recognition System using Siamese Neural Network for Enhanced Security Applications*  
 > **Authors:** Deepanshu Garhkoti, Sameer Gupta, Dr. Neha Agarwal  
 > **Institution:** Department of Computer Science, Amity University, Uttar Pradesh  
-> 🔗 **[Click here to view/download full PDF Research Paper](RESEARCH_PAPER_Image_Recognition_Using_SNN_Architecture.pdf)**
+> 🔗 **[Click here to view/download full PDF Research Paper](RESEARCH_PAPER_Image_Recognition_Using_SNN_Architecture.pdf)**  
+>  
+> 🌐 **Conference Presentation:**  
+> This system architecture and its decision-making use case were presented at the **International Conference on The Impact of Artificial Driven Decision Making and Agile Management Practices for Sustainable Development (ICADMS 2024)** (*"Artificial Brain in Decision Making"*).  
+> 🔗 **[View ResearchGate Publication Abstract](https://www.researchgate.net/publication/380666324_Artificial_Brain_in_Decision_Making_Abstract)**
 
 ---
 
@@ -193,15 +197,25 @@ Run Section 8 to launch the live OpenCV webcam verification application:
 
 ## 📖 Citation & References
 
-If you use this repository or refer to the research paper in your work, please cite:
+If you use this repository or refer to the research paper/conference publication in your work, please cite:
 
 ```bibtex
+% Primary Research Paper
 @article{garhkoti2024realtime,
   title={Real-Time Face Recognition System using Siamese Neural Network for Enhanced Security Applications},
   author={Garhkoti, Deepanshu and Gupta, Sameer and Agarwal, Dr. Neha},
   journal={Department of Computer Science, Amity University, Uttar Pradesh},
   year={2024},
   url={https://github.com/GarhkotiDeepanshu/Real-Time-Face-Recognition-System-using-Siamese-Neural-Network/blob/main/RESEARCH_PAPER_Image_Recognition_Using_SNN_Architecture.pdf}
+}
+
+% ICADMS 2024 Conference Presentation & Abstract
+@inproceedings{palit2024artificialbrain,
+  title={Artificial Brain in Decision Making},
+  author={Palit, Shamik and Garhkoti, Deepanshu and Gupta, Sameer and Agarwal, Dr. Neha},
+  booktitle={International Conference on The Impact of Artificial Driven Decision Making and Agile Management Practices for Sustainable Development (ICADMS 2024)},
+  year={2024},
+  url={https://www.researchgate.net/publication/380666324_Artificial_Brain_in_Decision_Making_Abstract}
 }
 ```
 
@@ -216,4 +230,5 @@ If you use this repository or refer to the research paper in your work, please c
 - **Computer Vision & Deep Learning:** Built custom CNN feature embeddings & similarity distance layers in TensorFlow/Keras.
 - **Metric Learning:** Applied one-shot learning techniques to solve high-accuracy facial verification without re-training models per identity.
 - **Real-Time Systems:** Integrated OpenCV hardware video capture with TensorFlow inference pipelines for low-latency identity authentication.
-- **Academic Research:** Co-authored and published a technical paper evaluating model accuracy against state-of-the-art architectures ($96.00\%$ accuracy).
+- **Academic Research & Publications:** Co-authored and published a technical paper evaluating model accuracy ($96.00\%$).
+- **Conference Presentation:** Presented the system architecture & AI decision-making use case at the **ICADMS 2024** International Conference ([ResearchGate Abstract](https://www.researchgate.net/publication/380666324_Artificial_Brain_in_Decision_Making_Abstract)).
