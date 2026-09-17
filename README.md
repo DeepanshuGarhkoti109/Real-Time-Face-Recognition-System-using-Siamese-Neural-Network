@@ -33,20 +33,41 @@ The model uses two identical CNN branches with shared weights to extract embeddi
 
 ```mermaid
 flowchart TD
-    A[Anchor Image 105x105x3] --> E1[Shared Embedding Network]
-    V[Validation Image 105x105x3] --> E2[Shared Embedding Network]
+    subgraph DataInput["Data Input"]
+        A["Anchor Image 105x105x3"]
+        V["Validation Image 105x105x3"]
+    end
 
-    E1 --> F1[4096-dim embedding vector]
-    E2 --> F2[4096-dim embedding vector]
+    subgraph TwinFeatureExtractors["Twin Feature Extractors"]
+        E1["Shared Embedding Network"]
+        E2["Shared Embedding Network"]
+    end
 
-    F1 --> L1[Custom L1 Distance Layer |v1 - v2|]
+    subgraph FeatureVectors["Feature Vectors"]
+        F1["4096-dim embedding vector"]
+        F2["4096-dim embedding vector"]
+    end
+
+    subgraph MetricLearning["Metric Learning"]
+        L1["Custom L1 Distance Layer"]
+    end
+
+    subgraph ClassificationOutput["Classification Output"]
+        Dense["Dense Layer + Sigmoid"]
+        P["Similarity Score 0.0 to 1.0"]
+    end
+
+    A --> E1
+    V --> E2
+    E1 --> F1
+    E2 --> F2
+    F1 --> L1
     F2 --> L1
-
-    L1 --> Dense[Dense Layer + Sigmoid]
-    Dense --> P[Similarity Score 0.0 to 1.0]
+    L1 --> Dense
+    Dense --> P
     P --> C{Score >= threshold?}
-    C -->|Yes| Verified[VERIFIED]
-    C -->|No| Unverified[UNVERIFIED]
+    C -->|Yes| Verified["VERIFIED"]
+    C -->|No| Unverified["UNVERIFIED"]
 ```
 
 ### Core Model Components
